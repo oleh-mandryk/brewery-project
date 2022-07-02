@@ -5,7 +5,7 @@
       <h2>{{brewery?.name}}</h2>
       <p>Address: {{brewery?.street}}, {{brewery?.city}}, {{brewery?.state}}, {{brewery?.postalCode}} </p>
 
-      <p>Phone: {{brewery?.phone}} | Website URL: <a target="_blank" href="{{brewery?.websiteUrl}}" >{{brewery?.websiteUrl}}</a></p>
+      <p>Phone: {{brewery?.phone}} <span class="sep" [hidden]="!(brewery?.phone && brewery?.websiteUrl)"> | </span> Website URL: <a target="_blank" href="{{brewery?.websiteUrl}}" >{{brewery?.websiteUrl}}</a></p>
 
         <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" >
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
@@ -20,7 +20,7 @@
                 <small>{{br.type}}</small>
               </div>
               <p class="mb-1">{{br?.street}}, {{br?.city}}, {{br?.state}}, {{br?.postalCode}}</p>
-              <small> {{br?.phone}} | <a target="_blank" href="{{br?.websiteUrl}}" >{{br?.websiteUrl}}</a> </small>
+              <small> {{br?.phone}} <span class="sep" [hidden]="!(br?.phone && br?.websiteUrl)"> | </span> <a target="_blank" href="{{br?.websiteUrl}}" >{{br?.websiteUrl}}</a> </small>
             </a>            
           </div>
     </div> 
