@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'brewery-project';
+  title = 'Breweries in San Diego';
+  
+  year = (new Date()).getFullYear();
+
+  arr = [1, 2, 3, 4];
+  
+
 }

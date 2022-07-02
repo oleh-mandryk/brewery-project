@@ -1,0 +1,27 @@
+<div class="row">  
+
+    <div  class="col-7">
+        
+      <h2>{{brewery?.name}}</h2>
+      <p>Address: {{brewery?.street}}, {{brewery?.city}}, {{brewery?.state}}, {{brewery?.postalCode}} </p>
+
+      <p>Phone: {{brewery?.phone}} | Website URL: <a target="_blank" href="{{brewery?.websiteUrl}}" >{{brewery?.websiteUrl}}</a></p>
+
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" >
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>     
+           
+    </div>
+    <div class="col-5">
+        <div class="list-group">
+            <a  *ngFor="let br of breweries" [routerLink]="['/brewery/', br.id]" class="list-group-item list-group-item-action" [ngClass]="{'active': br.id === id}" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{br.name}}</h5>
+                <small>{{br.type}}</small>
+              </div>
+              <p class="mb-1">{{br?.street}}, {{br?.city}}, {{br?.state}}, {{br?.postalCode}}</p>
+              <small> {{br?.phone}} | <a target="_blank" href="{{br?.websiteUrl}}" >{{br?.websiteUrl}}</a> </small>
+            </a>            
+          </div>
+    </div> 
+  </div>

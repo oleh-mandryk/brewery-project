@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr >
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Address (Street, City, State, ZIP)</th>
+      <th scope="col">Website URL</th>        
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let br of brewery">
+      <th scope="row"><a [routerLink]="['/brewery', br.id]" >{{br.name}}</a></th>
+      <td>{{br.type}}</td>
+      <td>{{br.street}}, {{br.city}}, {{br.state}}, {{br.postalCode}}</td>
+      <td><a target="_blank" href="{{br.websiteUrl}}">{{br.websiteUrl}}</a>   </td>        
+    </tr>     
+    
+  </tbody>
+</table>
+
+
+
+
