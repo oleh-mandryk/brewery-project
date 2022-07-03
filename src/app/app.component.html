@@ -38,9 +38,7 @@
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button *ngFor="let ar of arr" type="button" data-bs-target="#carouselExampleIndicators" [attr.data-bs-slide-to]="ar-1" class="active" aria-current="true" [attr.aria-label]="'Slide ' + ar"></button>
       </div>
       <div class="carousel-inner">
         <div *ngFor="let ar of arr" class="carousel-item" [ngClass]="{'active': ar === 1}">
