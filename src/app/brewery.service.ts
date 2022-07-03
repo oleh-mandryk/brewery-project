@@ -11,7 +11,7 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class BreweryService {
   
-  private breweryUrl = 'http://api.openbrewerydb.org/breweries';  // URL to web api
+  private breweryUrl = 'https://api.openbrewerydb.org/breweries';  // URL to web api
     
     constructor(
         private http: HttpClient,
