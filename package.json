@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",    
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -23,7 +23,9 @@
     "@angular/platform-browser": "^14.0.4",
     "@angular/platform-browser-dynamic": "^14.0.4",
     "@angular/router": "^14.0.4",
+    "@hapi/cryptiles": "^6.0.0",
     "bootstrap": "^5.1.3",
+    "brace-expansion": "^2.0.1",
     "express": "^4.18.1",
     "latest": "^0.2.0",
     "path": "^0.12.7",
